@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rajesh Phulwaria — Portfolio</title>
+    <meta name="description" content="Rajesh Phulwaria — modern portfolio showcasing projects, skills and contact." />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="brand" href="#">Rajesh<span class="accent">.</span></a>
+            <nav class="nav" id="nav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h1>Hi, I'm Rajesh Phulwaria.</h1>
+                    <p class="lead">I build clean, accessible web experiences - front-end dev and UI design.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#projects">See projects</a>
+                        <a class="btn ghost" href="#contact">Get in touch</a>
+                    </div>
+                </div>
+                <div class="hero-art">
+                    <div class="card-placeholder"><img src="assets/my logo.png" width="250px" style="border-radius: inherit;" </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About me</h2>
+                <p>I'm Rajesh Phulwaria... a self-driven developer who jumped into coding recently but refuses to think
+                    small. I build projects that escalate quickly: from simple Java and JS utilities to graph plotters,
+                    3D simulations in Blender, computer-vision experiments, and space-trajectory ideas inspired by
+                    ISRO/NASA.
+
+                    I don't do “safe” or boring. If something sparks my curiosity, I push it until it becomes a working
+                    prototype... whether that's orbit simulators, UI/UX concepts generated with AI, or practical tools
+                    like
+                    billing systems, Instagram viewers, and gesture-recognition programs.
+
+                    I work like a builder who'd rather break things than stay stagnant. My brain is always trying to
+                    turn real-life patterns into algorithms, and I'm comfortable letting obsession drive progress.
+                    Outside of coding, life is simple: a girlfriend who loves paneer, and a mindset that doesn't
+                    wait for permission.
+
+                    If you're reading this, expect projects that aren't polished for show... they're built to learn, to
+                    explore, and to stand out.</p>
+                
+                <h2>Skills & Technologies</h2>
+                <ul class="skills">
+                    <li>C/C++ with DSA</li>
+                    <li>Python and Ai/Ml enthusias</li>
+                    <li>HTML & CSS</li>
+                    <li>React / JavaScript</li>
+                    <li>Responsive Design</li>
+                    <li>Accessibility</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="container">
+                <h2>Selected projects</h2>
+                <div class="grid">
+                    <article class="project">
+                        <div class="thumb"><img src="assets/jarvis-chatbot.png" width="250px"></div>
+                        <a href="https://github.com/RajeshPhulwaria006/Jarvis-Ai-chatbot" target="_blank" class="clean"><h3>Jarvis-AI-chatbot</h3></a>
+                        <p>a chatbot using jarvis just for fun and experience how things work in IT and AI industry, as
+                            beginner.</p>
+                    </article>
+                    <article class="project">
+                        <div class="thumb"><img src="assets/Stock-predictor.png" width="250px"></div>
+                        <a href="https://github.com/RajeshPhulwaria006/stock-predictor-lstm" target="_blank" class="clean"><h3>Stock-predictor LSTM</h3></a>
+                        <p>A Python-based tool that fetches, cleans, and analyzes stock market data to uncover
+                            actionable insights. It helps traders and analysts visualize trends, detect anomalies, and
+                            make data-driven decisions using statistical and machine learning techniques.</p>
+                    </article>
+                    <article class="project">
+                        <div class="thumb"><img src="assets/Snake game.png" width="250px"></div>
+                        <a href="https://github.com/RajeshPhulwaria006/-Snake-Game-Pygame-Voice-Engine" target="_blank" class="clean"><h3>Snake game using pygame</h3></a>
+                        <p>A classic Snake Game built using Pygame with a twist... it includes text-to-speech voice
+                            feedback using pyttsx3.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container" id="contact">
+                <h2>Contact</h2>
+                <p>Interested in collaborating? Send a message and I'll get back to you.</p>
+                <form class="contact-form" action="#" onsubmit="return false;">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                    <div class="form-actions">
+                        <button class="btn primary" type="submit">Send message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-row">
+            <span>© <span id="year"></span> Rajesh Phulwaria</span>
+            <nav class="footer-nav">
+                <a href="https://www.instagram.com/rajesh_phulwaria.dev.py/">My Instagram</a>
+                <a href="https://github.com/RajeshPhulwaria006">My Github</a>
+                <a href="https://www.linkedin.com/in/rajesh-phulwaria-b61093315/">My Linkedin</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
