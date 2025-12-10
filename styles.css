@@ -26,6 +26,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.fa-brands {
+    font-size: 20px;
+}
+
+.fa-brands:hover{
+    font-size: 28px;
+    transition: 0.2s;
+}
+
 .clean {
     text-decoration: none;   /* no underline */
     color: inherit;   /* natural color */
