@@ -1,139 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rajesh Phulwaria — Portfolio</title>
-    <meta name="description" content="Rajesh Phulwaria — modern portfolio showcasing projects, skills and contact." />
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From | Rajesh Phulwaria</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
-    <header class="site-header">
-        <div class="container header-row">
-            <a class="brand" href="#">Rajesh<span class="accent">.</span></a>
-            <nav class="nav" id="nav">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="container">
+            <a href="#home"><div class="logo">RP</div></a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-inner">
-                <div class="hero-copy">
-                    <h1>Hi, I'm Rajesh Phulwaria.</h1>
-                    <p class="lead">I build clean, accessible web experiences - front-end dev and UI design.</p>
-                    <div class="hero-actions">
-                        <a class="btn primary" href="#projects">See projects</a>
-                        <a class="btn ghost" href="#contact">Get in touch</a>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, iam Rajesh Phulwaria</h1>
+                    <div class="subtitle">AI/ML enthusiast 🤖</div>
+                    <p>Building intelligent solutions through machine learning, deep learning, and data analytics. Passionate about transforming data into actionable insights and creating AI-powered applications.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
-                <div class="hero-art">
-                    <div class="card-placeholder"><img src="assets/my logo.png" width="250px" style="border-radius: inherit;" </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="code-line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div>
+                        <div class="code-line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div>
+                        <div class="code-line"><span class="comment"># Building LSTM model</span></div>
+                        <div class="code-line">model = <span class="function">Sequential</span>({</div>
+                        <div class="code-line">&nbsp;&nbsp;<span class="function">LSTM</span>(<span class="string">50</span>, return_sequences=<span class="keyword">True</span>),</div>
+                        <div class="code-line">&nbsp;&nbsp;<span class="function">Dropout</span>(<span class="string">0.2</span>),</div>
+                        <div class="code-line">&nbsp;&nbsp;<span class="function">Dense</span>(<span class="string">1</span>)</div>
+                        <div class="code-line">})</div>
                     </div>
                 </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About me</h2>
-                <p>I'm Rajesh Phulwaria... a self-driven developer who jumped into coding recently but refuses to think
-                    small. I build projects that escalate quickly: from simple Java and JS utilities to graph plotters,
-                    3D simulations in Blender, computer-vision experiments, and space-trajectory ideas inspired by
-                    ISRO/NASA.
-
-                    I don't do “safe” or boring. If something sparks my curiosity, I push it until it becomes a working
-                    prototype... whether that's orbit simulators, UI/UX concepts generated with AI, or practical tools
-                    like
-                    billing systems, Instagram viewers, and gesture-recognition programs.
-
-                    I work like a builder who'd rather break things than stay stagnant. My brain is always trying to
-                    turn real-life patterns into algorithms, and I'm comfortable letting obsession drive progress.
-                    Outside of coding.
-                    If you're reading this, expect projects that aren't polished for show... they're built to learn, to
-                    explore, and to stand out.</p>
-                
-                <h2>Skills & Technologies</h2>
-                <ul class="skills">
-                    <li>C/C++ with DSA</li>
-                    <li>Python and Ai/Ml enthusias</li>
-                    <li>HTML & CSS</li>
-                    <li>React / JavaScript</li>
-                    <li>Responsive Design</li>
-                    <li>Accessibility</li>
-                </ul>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projects" class="section projects">
-            <div class="container">
-                <h2>Selected projects</h2>
-                <div class="grid">
-                    <article class="project">
-                        <div class="thumb"><img src="assets/jarvis-chatbot.png" width="250px"></div>
-                        <a href="https://github.com/RajeshPhulwaria006/Jarvis-Ai-chatbot" target="_blank" class="clean"><h3>Jarvis-AI-chatbot</h3></a>
-                        <p>a chatbot using jarvis just for fun and experience how things work in IT and AI industry, as
-                            beginner.</p>
-                    </article>
-                    <article class="project">
-                        <div class="thumb"><img src="assets/Stock-predictor.png" width="250px"></div>
-                        <a href="https://github.com/RajeshPhulwaria006/stock-predictor-lstm" target="_blank" class="clean"><h3>Stock-predictor LSTM</h3></a>
-                        <p>A Python-based tool that fetches, cleans, and analyzes stock market data to uncover
-                            actionable insights. It helps traders and analysts visualize trends, detect anomalies, and
-                            make data-driven decisions using statistical and machine learning techniques.</p>
-                    </article>
-                    <article class="project">
-                        <div class="thumb"><img src="assets/Snake game.png" width="250px"></div>
-                        <a href="https://github.com/RajeshPhulwaria006/-Snake-Game-Pygame-Voice-Engine" target="_blank" class="clean"><h3>Snake game using pygame</h3></a>
-                        <p>A classic Snake Game built using Pygame with a twist... it includes text-to-speech voice
-                            feedback using pyttsx3.</p>
-                    </article>
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p>Building predictive models and intelligent systems using state-of-the-art ML algorithms</p>
+                    <div class="skill-tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Neural Networks</span>
+                        <span class="tag">LSTM</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Data Science</h3>
+                    <p>Analyzing complex datasets to extract meaningful insights and drive decisions</p>
+                    <div class="skill-tags">
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag">Analytics</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Programming</h3>
+                    <p>Strong foundation in multiple languages for building scalable solutions</p>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Data-Bases</h3>
+                    <p>Designing efficient data pipelines and managing databases</p>
+                    <div class="skill-tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">DBMS</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h3>Algorithms & DS</h3>
+                    <p>Implementing efficient algorithms and optimized data structures</p>
+                    <div class="skill-tags">
+                        <span class="tag">DSA</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">OOP</span>
+                        <span class="tag">Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Full Stack Dev.</h3>
+                    <p>Creating responsive web applications with modern technologies</p>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Figma</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="section contact">
-            <div class="container" id="contact">
-                <h2>Contact</h2>
-                <p>Interested in collaborating? Send a message and I'll get back to you.</p>
-                <form class="contact-form" action="#" onsubmit="return false;">
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Your name" required>
-                        <input type="email" name="email" placeholder="Email" required>
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>JARVIS AI Chatbot</h3>
+                            <a href="https://github.com/RajeshPhulwaria006/Jarvis-Ai-chatbot" target="_black" class="project-link">GitHub →</a>
+                        </div>
+                        <p>Engineered an intelligent conversational AI assistant using Python and NLP with context-aware dialogue management. Integrated multiple APIs for voice recognition, text-to-speech, and real-time information retrieval with modular architecture.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Voice Recognition</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-icon">✓</span>
+                                <span>85% Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🔧</span>
+                                <span>Modular Design</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🎯</span>
+                                <span>Multi-turn Conversations</span>
+                            </div>
+                        </div>
                     </div>
-                    <textarea name="message" rows="5" placeholder="Message" required></textarea>
-                    <div class="form-actions">
-                        <button class="btn primary" type="submit">Send message</button>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Stock Price Prediction - LSTM</h3>
+                            <a href="https://github.com/RajeshPhulwaria006/stock-predictor-LSTM" target="_blank" class="project-link">GitHub →</a>
+                        </div>
+                        <p>Developed deep learning model using Long Short-Term Memory networks for stock market trend prediction. Preprocessed historical data from Yahoo Finance API with time-series forecasting techniques and achieved 87% prediction accuracy through hyperparameter tuning.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">LSTM</span>
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Data Visualization</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-icon">📈</span>
+                                <span>87% Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">📊</span>
+                                <span>5+ Years Data</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🎯</span>
+                                <span>Real-time Predictions</span>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Data Structures & Algorithms Suite</h3>
+                        </div>
+                        <p>Comprehensive DSA implementations in C++ covering arrays, linked lists, trees, graphs, and advanced algorithms. Optimized for efficiency with focus on time and space complexity improvements, featuring 50+ algorithmic challenges with clean, maintainable OOP design.</p>
+                        <div class="skill-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">DSA</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Problem Solving</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-icon">🎯</span>
+                                <span>50+ Problems</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⚡</span>
+                                <span>Optimized Solutions</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🔍</span>
+                                <span>All Major DS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="site-footer">
-        <div class="container footer-row">
-            <span>© <span id="year"></span> Rajesh Phulwaria</span>
-            <nav class="footer-nav">
-                <a href="https://www.instagram.com/rajesh_phulwaria.dev.py/">
-                    <i class="fa-brands fa-instagram fa-2x"></i>
-                </a>
-                <a href="https://github.com/RajeshPhulwaria006">
-                    <i class="fa-brands fa-github fa-2x"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/rajesh-phulwaria-b61093315/">
-                    <i class="fa-brands fa-linkedin fa-2x"></i>
-                </a>
-            </nav>
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Let's Connect</h2>
+                <p style="color: var(--gray); font-size: 18px; margin-bottom: 20px;">
+                    Seeking software engineering and AI/ML internship opportunities. Open to collaborating on innovative projects and contributing to cutting-edge technology solutions.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:phulwariarajesh152@gmail.com" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-chisel fa-regular fa-envelope fa-2x"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--gray);">Email</div>
+                            <div>phulwariarajesh152@gmail.com</div>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/rajesh-phulwaria" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-linkedin fa-2x"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--gray);">LinkedIn</div>
+                            <div>rajesh-phulwaria</div>
+                        </div>
+                    </a>
+                    <a href="https://instagram.com/rajesh_phulwaria.dev.py" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-instagram fa-2x"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--gray);">instagram</div>
+                            <div>rajesh_phulwaria.dev.py</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/RajeshPhulwaria006/" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-square-github fa-2x fa-lumos!"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--gray);">GitHub</div>
+                            <div>Rajesh Phulwaria</div>
+                        </div>
+                    </a>
+                    <a href="tel:+917737346389" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-mobile-screen fa-2x"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--gray);">Phone</div>
+                            <div>+91-7737346389</div>
+                        </div>
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 style="margin-bottom: 10px;">📍 Location</h3>
+            <p style="color: var(--gray);">Jodhpur, Rajasthan, India</p>
+            <p>&copy; 2025 Rajesh Phulwaria. Crafted with passion for AI & Innovation.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>

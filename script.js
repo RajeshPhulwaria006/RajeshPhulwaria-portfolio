@@ -1,58 +1,38 @@
-document.addEventListener('DOMContentLoaded',function(){
-  // set current year
-  const yearEl = document.getElementById('year');
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+}
 
-  // mobile nav toggle
-  const nav = document.getElementById('nav');
-  const toggle = document.getElementById('navToggle');
-  if(toggle && nav){
-    toggle.addEventListener('click',()=>{
-      nav.classList.toggle('open');
-      if(nav.classList.contains('open')){
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.gap = '12px';
-        nav.style.position = 'absolute';
-        nav.style.right = '12px';
-        nav.style.top = '64px';
-        nav.style.background = 'rgba(11,17,28,0.85)';
-        nav.style.padding = '12px';
-        nav.style.borderRadius = '10px';
-      } else {
-        nav.style.display = '';
-        nav.style.position = '';
-        nav.style.background = '';
-        nav.style.padding = '';
-      }
-    });
-  }
-
-  // smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-    anchor.addEventListener('click',function(e){
-      const href = this.getAttribute('href');
-      if(href && href.length>1){
-        const el = document.querySelector(href);
-        if(el){
-          e.preventDefault();
-          el.scrollIntoView({behavior:'smooth',block:'start'});
-          // close nav on mobile
-          if(nav && nav.classList.contains('open')){
-            nav.classList.remove('open');
-            nav.style.display = '';
-          }
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('navLinks').classList.remove('active');
         }
-      }
     });
-  });
+});
 
-  // contact form (demo only)
-  const form = document.querySelector('.contact-form');
-  if(form){
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      alert('Thanks! This contact form is a demo — backend is not implemented yet.');
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
     });
-  }
+}, observerOptions);
+
+document.querySelectorAll('.skill-card, .project-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s, transform 0.6s';
+    observer.observe(el);
 });
