@@ -20,9 +20,7 @@ Outside the tech grind, life stays grounded — a girlfriend who loves paneer, a
 
 ## 🔥 **Highlights of What I Build**
 
-- Interactive graph plotters using mathematical equations  
-- 3D simulations in Blender using Python  
-- Rocket trajectory + orbit propagation experiments  
+- Interactive graph plotters using mathematical equations
 - AI-powered UI/UX generation concepts  
 - Billing systems, utility tools, and form handlers  
 - Real-time hand gesture recognition using OpenCV  
@@ -32,8 +30,7 @@ Outside the tech grind, life stays grounded — a girlfriend who loves paneer, a
 
 ## 🛠️ **Tech Stack**
 
-**Frontend:** HTML, CSS, JavaScript  
-**Backend:** Node.js (actively learning & building)  
+**Frontend:** HTML, CSS, JavaScript
 **Tools:** Blender Python, EmailJS, OpenCV  
 **Extras:** UI/UX design, math-based animations, logic-heavy experiment apps  
 
