@@ -30,8 +30,8 @@ Outside the tech grind, life stays grounded — a girlfriend who loves paneer, a
 
 ## 🛠️ **Tech Stack**
 
-**Frontend:** HTML, CSS, JavaScript
-**Tools:** Blender Python, EmailJS, OpenCV  
+**Frontend:** HTML, CSS, JavaScript <br>
+**Tools:** Blender Python, EmailJS, OpenCV  <br>
 **Extras:** UI/UX design, math-based animations, logic-heavy experiment apps  
 
 ---
