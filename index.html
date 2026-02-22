@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <div class="bg-animation"></div>
 
     <nav>
         <div class="container">
-            <a href="https://rajeshphulwaria-portfolio.netlify.app/"><div class="logo">RP</div></a>
+            <a href="https://rajeshphulwaria-portfolio.netlify.app/">
+                <div class="logo">RAJ.DEV</div>
+            </a>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -22,7 +26,10 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#Certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="assets/Rajesh_CV.pdf" download="Rajesh_Phulwaria_CV.pdf" class=" btn btn-secondary">Resume / CV</a></li>
+
             </ul>
         </div>
     </nav>
@@ -33,12 +40,16 @@
                 <div class="hero-text">
                     <h1>Hi, iam Rajesh Phulwaria</h1>
                     <div class="subtitle">AI/ML enthusiast 🤖</div>
-                    <p>Building intelligent solutions through machine learning, deep learning, and data analytics. Passionate about transforming data into actionable insights and creating AI-powered applications.</p>
+                    <p>Building intelligent solutions through machine learning, deep learning, and data analytics.
+                        Passionate about transforming data into actionable insights and creating AI-powered
+                        applications.</p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
+
+
                 <div class="hero-visual">
                     <div class="code-window">
                         <div class="code-header">
@@ -46,14 +57,38 @@
                             <div class="dot"></div>
                             <div class="dot"></div>
                         </div>
-                        <div class="code-line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</div>
-                        <div class="code-line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</div>
-                        <div class="code-line"><span class="comment"># Building LSTM model</span></div>
-                        <div class="code-line">model = <span class="function">Sequential</span>({</div>
-                        <div class="code-line">&nbsp;&nbsp;<span class="function">LSTM</span>(<span class="string">50</span>, return_sequences=<span class="keyword">True</span>),</div>
-                        <div class="code-line">&nbsp;&nbsp;<span class="function">Dropout</span>(<span class="string">0.2</span>),</div>
-                        <div class="code-line">&nbsp;&nbsp;<span class="function">Dense</span>(<span class="string">1</span>)</div>
-                        <div class="code-line">})</div>
+
+                        <div class="code-line"><span class="keyword">class</span> <span
+                                class="function">RajeshPhulwaria</span>:</div>
+                        <div class="code-line">&nbsp;&nbsp;<span class="keyword">def</span> <span
+                                class="function">__init__</span>(self):</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;self.role = <span class="string">"AI Engineer in
+                                Progress"</span></div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;self.stack = [<span
+                                class="string">"Python"</span>, <span class="string">"C++"</span>, <span
+                                class="string">"PyTorch"</span>, <span class="string">"Flask"</span>]</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;self.mindset = <span class="string">"No
+                                shortcuts. Learn from scratch."</span></div>
+
+                        <div class="code-line"></div>
+
+                        <div class="code-line">&nbsp;&nbsp;<span class="keyword">def</span> <span
+                                class="function">build_model</span>(self, data):</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;model = <span
+                                class="function">NeuralNetwork</span>(layers=3)</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;model.<span class="function">add</span>(<span
+                                class="string">"Linear"</span>)</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;model.<span class="function">add</span>(<span
+                                class="string">"ReLU"</span>)</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;model.<span class="function">add</span>(<span
+                                class="string">"Sigmoid"</span>)</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> model.<span
+                                class="function">train</span>(data)</div>
+
+                        <div class="code-line"></div>
+
+                        <div class="code-line"><span class="comment"># Goal: Master Math → ML → Deep Learning →
+                                AI</span></div>
                     </div>
                 </div>
             </div>
@@ -142,9 +177,12 @@
                     <div class="project-content">
                         <div class="project-header">
                             <h3>JARVIS AI Chatbot</h3>
-                            <a href="https://github.com/RajeshPhulwaria006/Jarvis-Ai-chatbot" target="_black" class="project-link">GitHub →</a>
+                            <a href="https://github.com/RajeshPhulwaria006/Jarvis-Ai-chatbot" target="_black"
+                                class="project-link">GitHub →</a>
                         </div>
-                        <p>Engineered an intelligent conversational AI assistant using Python and NLP with context-aware dialogue management. Integrated multiple APIs for voice recognition, text-to-speech, and real-time information retrieval with modular architecture.</p>
+                        <p>Engineered an intelligent conversational AI assistant using Python and NLP with context-aware
+                            dialogue management. Integrated multiple APIs for voice recognition, text-to-speech, and
+                            real-time information retrieval with modular architecture.</p>
                         <div class="skill-tags">
                             <span class="tag">Python</span>
                             <span class="tag">NLP</span>
@@ -172,9 +210,12 @@
                     <div class="project-content">
                         <div class="project-header">
                             <h3>Stock Price Prediction - LSTM</h3>
-                            <a href="https://github.com/RajeshPhulwaria006/stock-predictor-LSTM" target="_blank" class="project-link">GitHub →</a>
+                            <a href="https://github.com/RajeshPhulwaria006/stock-predictor-LSTM" target="_blank"
+                                class="project-link">GitHub →</a>
                         </div>
-                        <p>Developed deep learning model using Long Short-Term Memory networks for stock market trend prediction. Preprocessed historical data from Yahoo Finance API with time-series forecasting techniques and achieved 87% prediction accuracy through hyperparameter tuning.</p>
+                        <p>Developed deep learning model using Long Short-Term Memory networks for stock market trend
+                            prediction. Preprocessed historical data from Yahoo Finance API with time-series forecasting
+                            techniques and achieved 87% prediction accuracy through hyperparameter tuning.</p>
                         <div class="skill-tags">
                             <span class="tag">Python</span>
                             <span class="tag">TensorFlow</span>
@@ -202,34 +243,70 @@
                 <div class="project-card">
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>Data Structures & Algorithms Suite</h3>
+                            <h3>Movie Recommendation System</h3>
+                            <a href="https://github.com/RajeshPhulwaria006/movie-recommendation-system" target="_blank"
+                                class="project-link">GitHub →</a>
                         </div>
-                        <p>Comprehensive DSA implementations in C++ covering arrays, linked lists, trees, graphs, and advanced algorithms. Optimized for efficiency with focus on time and space complexity improvements, featuring 50+ algorithmic challenges with clean, maintainable OOP design.</p>
+                        <p>I developed a content-based movie recommendation system trained on the TMDB 5000 Movies dataset, leveraging TF-IDF vectorization and cosine similarity to recommend movies based on content similarity. This project strengthened my understanding of NLP feature engineering, similarity-based learning, and ML model deployment.</p>
                         <div class="skill-tags">
-                            <span class="tag">C++</span>
-                            <span class="tag">DSA</span>
-                            <span class="tag">OOP</span>
-                            <span class="tag">Optimization</span>
-                            <span class="tag">Problem Solving</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">TF-IDF</span>
+                            <span class="tag">NLP</span>
                         </div>
                         <div class="project-stats">
                             <div class="stat">
                                 <span class="stat-icon">🎯</span>
-                                <span>50+ Problems</span>
+                                <span>90% Accuracy</span>
                             </div>
                             <div class="stat">
                                 <span class="stat-icon">⚡</span>
-                                <span>Optimized Solutions</span>
+                                <span>5000+ raw data</span>
                             </div>
                             <div class="stat">
                                 <span class="stat-icon">🔍</span>
-                                <span>All Major DS</span>
+                                <span>Real-time TMDB movies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-header" id="Certificates">
+                    <h2>Certifications</h2>
+                    <p>Validated skills. Continuous learning. Execution mindset.</p>
+                </div>
+
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-content">
+                            <h3>Python programming with data science</h3>
+                            <p class="issuer">Issued by Internsforge</p>
+                            <p class="date">Completed: Jan 2026</p>
+                            <p class="description">
+                                completed my internship and learning program in Programming with Python, where I worked on multiple real-world ML projects including Customer Churn Prediction, Titanic Survival, House Price Prediction, Credit Card Fraud Detection, Handwritten Digit Recognition, and a Content-Based Movie Recommendation System.
+                            </p>
+                            <div class="certificate-actions">
+                                <a href="https://script.google.com/macros/s/AKfycbwOEu9BQIXFZql2qvCaZSnCFLvQMxQ6KNE0VlgdR-cNSUKxEyzHmBgcBSyPcjk2Cz3c4g/exec?cid=INTERNSFORGE-2026-0111&v=1770401986572" target="_blank" class="btn-view">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card">
+                        <div class="certificate-content">
+                            <h3>Data analytics job simulation</h3>
+                            <p class="issuer">Issued by Forage</p>
+                            <p class="date">Completed: Oct 2025</p>
+                            <p class="description">
+                                Successfully completed the Data Analytics Job Simulation offered by Deloitte, gaining practical exposure to real-world business problem-solving using Tableau. During the simulation, I worked on transforming raw datasets into meaningful insights by Cleaning and structuring business data, Designing interactive dashboards in Tableau.
+                            </p>
+                            <div class="certificate-actions">
+                                <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_68ebae699a5ed0f6bbcd444d_1760363318811_completion_certificate.pdf" target="_blank" class="btn-view">View Certificate</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="section" id="contact">
@@ -237,7 +314,8 @@
             <div class="contact-content">
                 <h2 class="section-title">Let's Connect</h2>
                 <p style="color: var(--gray); font-size: 18px; margin-bottom: 20px;">
-                    Seeking software engineering and AI/ML internship opportunities. Open to collaborating on innovative projects and contributing to cutting-edge technology solutions.
+                    Seeking software engineering and AI/ML internship opportunities. Open to collaborating on innovative
+                    projects and contributing to cutting-edge technology solutions.
                 </p>
                 <div class="contact-links">
                     <a href="mailto:phulwariarajesh152@gmail.com" class="contact-card">
@@ -249,7 +327,8 @@
                             <div>phulwariarajesh152@gmail.com</div>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/rajesh-phulwaria-b61093315/" target="_blank" class="contact-card">
+                    <a href="https://www.linkedin.com/in/rajesh-phulwaria-b61093315/" target="_blank"
+                        class="contact-card">
                         <div class="contact-icon">
                             <i class="fa-brands fa-linkedin fa-2x"></i>
                         </div>
@@ -285,8 +364,8 @@
                             <div>+91-7737346389</div>
                         </div>
                     </a>
+                </div>
             </div>
-        </div>
     </section>
 
     <footer>
@@ -299,4 +378,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
