@@ -45,27 +45,24 @@ if (contactForm) {
         event.preventDefault();
 
         const formData = new FormData(contactForm);
-        const payload = {
-            name: formData.get("name")?.toString().trim(),
-            email: formData.get("email")?.toString().trim(),
-            subject: formData.get("subject")?.toString().trim(),
-            message: formData.get("message")?.toString().trim()
-        };
+        const payload = new URLSearchParams();
+
+        for (const [key, value] of formData.entries()) {
+            payload.append(key, String(value));
+        }
 
         formStatus.textContent = "Sending...";
         formStatus.className = "form-status";
 
         try {
-            const response = await fetch("/api/contact", {
+            const response = await fetch("/", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: payload.toString()
             });
 
-            const data = await response.json();
-
-            if (!response.ok || !data.ok) {
-                throw new Error(data.error || "Failed to send message.");
+            if (!response.ok) {
+                throw new Error("Failed to send message.");
             }
 
             contactForm.reset();

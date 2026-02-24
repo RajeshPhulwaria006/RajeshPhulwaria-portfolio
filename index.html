@@ -329,7 +329,9 @@
                     Seeking software engineering and AI/ML internship opportunities. Open to collaborating on innovative
                     projects and contributing to cutting-edge technology solutions.
                 </p>
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="bot-field">
                     <div class="form-row">
                         <input type="text" name="name" placeholder="Your name" required>
                         <input type="email" name="email" placeholder="Your email" required>
