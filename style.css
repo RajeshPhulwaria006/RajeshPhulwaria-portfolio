@@ -227,6 +227,7 @@ nav .container {
 }
 
 .code-window {
+    display: block;
     background: rgba(30, 41, 59, 0.8);
     border-radius: 12px;
     padding: 20px;
@@ -570,7 +571,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .menu-toggle {
         display: flex;
     }
@@ -594,14 +595,27 @@ footer {
 
     .hero-content {
         grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
     }
 
     .hero-text h1 {
-        font-size: 36px;
+        font-size: 45px;
     }
 
     .hero-text .subtitle {
-        font-size: 20px;
+        font-size: 25px;
+    }
+
+    .code-window {
+        display: none;
+        animation: none;
+    }
+
+    .cta-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     .section-title {
