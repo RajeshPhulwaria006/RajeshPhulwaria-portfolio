@@ -36,3 +36,44 @@ document.querySelectorAll('.skill-card, .project-card').forEach(el => {
     el.style.transition = 'opacity 0.6s, transform 0.6s';
     observer.observe(el);
 });
+
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const payload = {
+            name: formData.get("name")?.toString().trim(),
+            email: formData.get("email")?.toString().trim(),
+            subject: formData.get("subject")?.toString().trim(),
+            message: formData.get("message")?.toString().trim()
+        };
+
+        formStatus.textContent = "Sending...";
+        formStatus.className = "form-status";
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || !data.ok) {
+                throw new Error(data.error || "Failed to send message.");
+            }
+
+            contactForm.reset();
+            formStatus.textContent = "Message sent successfully.";
+            formStatus.className = "form-status success";
+        } catch (error) {
+            formStatus.textContent = error.message || "Could not send message.";
+            formStatus.className = "form-status error";
+        }
+    });
+}

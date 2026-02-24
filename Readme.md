@@ -39,3 +39,38 @@ Outside the tech grind, life stays grounded — a girlfriend who loves paneer, a
 ## 🌐 **Live Portfolio**
 Example:  
 https://rajeshphulwaria-portfolio.netlify.app/  
+
+---
+
+## Backend Setup (Express API)
+
+This repo now includes a Node.js backend for contact form submissions.
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create env file:
+
+```bash
+copy .env.example .env
+```
+
+3. Run server:
+
+```bash
+npm run dev
+```
+
+4. Open:
+
+```text
+http://localhost:5000
+```
+
+### API Endpoints
+
+- `GET /api/health` - backend health check
+- `POST /api/contact` - save contact messages from the website form
