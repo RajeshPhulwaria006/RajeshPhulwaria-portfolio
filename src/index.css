@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  --canvas: #0a0a0c;
+  --canvas-raised: #111114;
+  --canvas-surface: #16161b;
+  --line: rgba(255, 255, 255, 0.08);
+  --ink: #f2f2f5;
+  --ink-dim: #9a9aa5;
+  --ink-faint: #5c5c66;
+  --grid-line: rgba(255, 255, 255, 0.035);
+}
+
+html.light {
+  --canvas: #faf9f7;
+  --canvas-raised: #ffffff;
+  --canvas-surface: #f1f0ec;
+  --line: rgba(0, 0, 0, 0.09);
+  --ink: #16161a;
+  --ink-dim: #55555e;
+  --ink-faint: #8b8b93;
+  --grid-line: rgba(0, 0, 0, 0.045);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  @apply bg-canvas text-ink font-body antialiased;
+  font-feature-settings: 'ss01' on, 'ss02' on;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: #7c8cff;
+  color: #0a0a0c;
+}
+
+:focus-visible {
+  outline: 2px solid #7c8cff;
+  outline-offset: 3px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 8px;
+}
+
+.bg-grid {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
