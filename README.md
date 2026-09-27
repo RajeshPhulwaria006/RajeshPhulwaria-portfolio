@@ -171,13 +171,10 @@ Before publishing the portfolio, check the following:
 
 ### Resume
 
-Replace:
-
 ```text
 public/resume.pdf
 ```
 
-with the resume version you want visitors to download.
 
 ### SEO URLs
 

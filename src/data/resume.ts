@@ -153,6 +153,36 @@ export const projects: Project[] = [
     diagram: ['Dataset', 'TF-IDF Vectors', 'Cosine Similarity', 'Ranked Recommendations', 'Flask App'],
     githubUrl: 'https://github.com/RajeshPhulwaria006/movie-recommendation-system'
   },
+  {
+    id: 'patient-data-management',
+    title: 'Patient Data Management System',
+    tech: [
+      'Python',
+      'FastAPI',
+      'Pydantic',
+      'Streamlit',
+      'Docker',
+      'Docker Hub',
+      'AWS EC2',
+      'Linux'
+    ],
+    points: [
+      'Developed a full-stack patient data management system with RESTful FastAPI APIs, Pydantic validation, and a Streamlit dashboard.',
+      'Implemented patient CRUD operations, ID-based search, sorting, automatic BMI calculation, and BMI classification.',
+      'Containerized the application with Docker, published the image to Docker Hub, and deployed the application on an AWS EC2 instance.'
+    ],
+    diagram: [
+      'Streamlit Frontend',
+      'HTTP/JSON',
+      'FastAPI REST API',
+      'Pydantic Validation',
+      'Patient Data Storage',
+      'Docker Container',
+      'AWS EC2 Deployment'
+    ],
+    githubUrl: 'https://github.com/RajeshPhulwaria006/Patient_Data_Management_FastAPI'
+  }
+
 ]
 
 export const publication = {

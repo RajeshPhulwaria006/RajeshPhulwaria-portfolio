@@ -3,6 +3,7 @@ import { Github, ChevronDown } from 'lucide-react'
 import type { Project } from '../data/resume'
 import PipelineDiagram from './PipelineDiagram'
 import BPEDemo from './BPEDemo'
+import PatientDeploymentDemo from './PatientDeploymentDemo'
 
 export default function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false)
@@ -80,6 +81,14 @@ export default function ProjectCard({ project }: { project: Project }) {
             interactive · byte-pair merge on "learning"
           </p>
           <BPEDemo />
+        </div>
+      )}
+      {expanded && project.id === 'patient-data-management' && (
+        <div className="border-t border-line p-7 sm:p-9">
+          <p className="font-mono text-[11px] text-ink-faint mb-4">
+            Live Project Preview
+          </p>
+          <PatientDeploymentDemo />
         </div>
       )}
     </article>
