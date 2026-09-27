@@ -84,34 +84,13 @@ The resulting build can be deployed to a static hosting platform such as Netlify
 The project keeps portfolio content separate from the UI components.
 
 ```
-├── 📁 public
-│   ├── 🖼️ favicon.png
-│   ├── 🖼️ og-image.png
-│   ├── 📕 resume.pdf
-│   ├── 📄 robots.txt
-│   └── ⚙️ sitemap.xml
+├── 📁 public/
+|
 ├── 📁 src
-│   ├── 📁 components
-│   │   ├── 📄 About.tsx
-│   │   ├── 📄 BPEDemo.tsx
-│   │   ├── 📄 Contact.tsx
-│   │   ├── 📄 Experience.tsx
-│   │   ├── 📄 Footer.tsx
-│   │   ├── 📄 Hero.tsx
-│   │   ├── 📄 Nav.tsx
-│   │   ├── 📄 OpenSource.tsx
-│   │   ├── 📄 PipelineDiagram.tsx
-│   │   ├── 📄 ProjectCard.tsx
-│   │   ├── 📄 Projects.tsx
-│   │   ├── 📄 Publication.tsx
-│   │   ├── 📄 ResearchInterests.tsx
-│   │   ├── 📄 ResearchJourney.tsx
-│   │   ├── 📄 ScrollProgress.tsx
-│   │   └── 📄 Skills.tsx
-│   ├── 📁 data
-│   │   └── 📄 resume.ts
-│   ├── 📁 hooks
-│   │   └── 📄 useTheme.ts
+│   ├── 📁 components/
+│   ├── 📁 data/
+│   ├── 📁 hooks/
+|   |
 │   ├── 📄 App.tsx
 │   ├── 🎨 index.css
 │   ├── 📄 main.tsx
