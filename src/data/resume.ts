@@ -27,12 +27,13 @@ export const researchInterests = [
 ]
 
 export const skills = {
-  Languages: ['Python', 'C++', 'SQL'],
+  Languages: ['Python', 'C++', 'SQL', 'Java (Beginner)', 'HTML/CSS', 'JavaScript (Beginner)'],
   'Machine Learning': [
     'Regression',
     'Classification',
     'Feature Engineering',
     'Preprocessing',
+    'Natural Language Processing',
     'EDA',
     'Model Selection',
     'Cross Validation',
@@ -41,7 +42,10 @@ export const skills = {
     'PyTorch',
     'TensorFlow',
     'CNNs',
+    'RNNs',
     'LSTMs',
+    'Attention-Mechanism',
+    'Encoder-Decoder',
     'Backpropagation',
     'Gradient Flow',
     'Optimization',
@@ -57,13 +61,17 @@ export const skills = {
     'Prompt Engineering',
     'Context Engineering',
     'Function Calling',
+    'Vector DB',
     'Hugging Face',
     'Gemini API',
   ],
   'Tools / Research': [
     'NumPy',
     'Pandas',
+    'Scikit-Learn',
+    'Jupyter Notebook',
     'FastAPI',
+    'Docker',
     'Git',
     'Linux',
     'Experiment Design',
@@ -86,72 +94,35 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'transformer-from-scratch',
-    title: 'Transformer from Scratch',
-    tech: ['NumPy', 'PyTorch'],
-    points: [
-      'Implemented core Transformer components from first principles, including self-attention, positional encoding, feed-forward networks, masking, and normalization.',
-      'Studied tensor transformations and mathematical operations underlying modern Transformer architectures.',
+    id: 'niyamit',
+    title: 'Niyamit — Legal Metrology Compliance System',
+    tech: [
+      'Python',
+      'FastAPI',
+      'PaddleOCR',
+      'OpenCV',
+      'PostgreSQL',
+      'Next.js',
+      'TypeScript',
+      'Docker'
     ],
-    diagram: ['Input', 'Embedding', 'Positional Encoding', 'Self-Attention', 'Feed Forward', 'Normalization', 'Output'],
-    githubUrl: 'https://github.com/RajeshPhulwaria006/Transformer_Architecture_inNumpy'
-  },
-  {
-    id: 'gpt-tokenizer',
-    title: 'GPT-Style Tokenizer from Scratch',
-    tech: ['Python', 'BPE'],
+
     points: [
-      'Implemented a byte-level BPE tokenizer with pair-frequency analysis, iterative merging, vocabulary construction, and encode/decode pipelines.',
-      'Trained on a diverse corpus and analyzed how merge count affects vocabulary size, tokenization granularity, and sequence length.',
+      'Developed as a team contribution for Smart India Hackathon 2026 Problem Statement 26034, focused on automated compliance verification of packaged commodities under the Legal Metrology (Packaged Commodities) Rules, 2011.',
+      'Contributed to the OCR, structured extraction, and deterministic rule-engine pipeline for validating declarations including MRP, net quantity, manufacturer details, country of origin, and consumer-care information.',
+      'Worked on image-processing and compliance workflows including multi-angle ingestion, barcode-based physical measurement, text extraction, and statutory violation identification.'
     ],
-    diagram: ['Text', 'UTF-8 Bytes', 'Pair Counting', 'Most Frequent Pair', 'Merge', 'Vocabulary', 'Token IDs'],
-    githubUrl: 'https://github.com/RajeshPhulwaria006/GPT-style_Tokenizer_scratch'
-  },
-  {
-    id: 'research-paper-summarizer',
-    title: 'Research Paper Summarizer',
-    tech: ['Python', 'LangChain', 'Groq', 'GPT-OSS-120B'],
-    points: [
-      'Built an interactive AI-powered research paper summarizer supporting configurable explanation style and response length.',
-      "Used LangChain's PromptTemplate for dynamic prompt construction and Groq for fast LLM inference.",
+
+    diagram: [
+      'Product Images',
+      'PaddleOCR',
+      'Structured Data Extraction',
+      'Image / Measurement Processing',
+      'Statutory Rule Engine',
+      'Compliance Verification',
+      'Evidence / Report'
     ],
-    diagram: ['User', 'Paper Title', 'PromptTemplate', 'LangChain', 'Groq API', 'GPT-OSS-120B', 'Summary'],
-    githubUrl: 'https://github.com/RajeshPhulwaria006/Research_paper_summarizer',
-    note: 'Current version uses the research paper title as input rather than retrieving and processing the actual paper PDF/content.',
-    tag: 'Future direction: RAG-based Research Paper Assistant',
-  },
-  {
-    id: 'jarvis',
-    title: 'Jarvis — LLM Powered AI Assistant',
-    tech: ['Python', 'Gemini API'],
-    points: [
-      'Built an AI assistant supporting contextual conversations, speech recognition, browser automation, and real-time information retrieval.',
-      'Designed a modular architecture for integrating LLM capabilities and external tools.',
-    ],
-    diagram: ['User', 'Jarvis', 'LLM', 'Speech', 'Browser', 'Information Retrieval'],
-    githubUrl: 'https://github.com/RajeshPhulwaria006/Jarvis-Ai-chatbot'
-  },
-  {
-    id: 'foundational-ai-lab',
-    title: 'Foundational AI Lab',
-    tech: ['PyTorch', 'TensorFlow'],
-    points: [
-      'Developed an open-source repository exploring neural networks from mathematical foundations to practical implementations.',
-      'Implemented optimization techniques, CNNs, LSTMs, learning pipelines, visualization, and experimentation workflows.',
-    ],
-    diagram: ['Foundations', 'Optimization', 'CNNs', 'LSTMs', 'Experimentation', 'Visualization'],
-    githubUrl: 'https://github.com/RajeshPhulwaria006/AI-journey-foundation',
-    tag: 'Research Notebook / Laboratory',
-  },
-  {
-    id: 'movie-recommendation',
-    title: 'Movie Recommendation System',
-    tech: ['Python', 'TF-IDF', 'Flask'],
-    points: [
-      'Developed a content-based recommendation engine using TF-IDF and cosine similarity with an interactive Flask deployment.',
-    ],
-    diagram: ['Dataset', 'TF-IDF Vectors', 'Cosine Similarity', 'Ranked Recommendations', 'Flask App'],
-    githubUrl: 'https://github.com/RajeshPhulwaria006/movie-recommendation-system'
+    githubUrl: 'https://github.com/RajeshPhulwaria006/Niyamit'
   },
   {
     id: 'patient-data-management',
@@ -181,8 +152,65 @@ export const projects: Project[] = [
       'AWS EC2 Deployment'
     ],
     githubUrl: 'https://github.com/RajeshPhulwaria006/Patient_Data_Management_FastAPI'
+  },
+  {
+    id: 'research-paper-summarizer',
+    title: 'Research Paper Summarizer',
+    tech: ['Python', 'LangChain', 'Groq', 'GPT-OSS-120B'],
+    points: [
+      'Built an interactive AI-powered research paper summarizer supporting configurable explanation style and response length.',
+      "Used LangChain's PromptTemplate for dynamic prompt construction and Groq for fast LLM inference.",
+    ],
+    diagram: ['User', 'Paper Title', 'PromptTemplate', 'LangChain', 'Groq API', 'GPT-OSS-120B', 'Summary'],
+    githubUrl: 'https://github.com/RajeshPhulwaria006/Research_paper_summarizer',
+    note: 'Current version uses the research paper title as input rather than retrieving and processing the actual paper PDF/content.',
+    tag: 'Future direction: RAG-based Research Paper Assistant',
+  },
+  {
+    id: 'transformer-from-scratch',
+    title: 'Transformer from Scratch',
+    tech: ['NumPy', 'PyTorch'],
+    points: [
+      'Implemented core Transformer components from first principles, including self-attention, positional encoding, feed-forward networks, masking, and normalization.',
+      'Studied tensor transformations and mathematical operations underlying modern Transformer architectures.',
+    ],
+    diagram: ['Input', 'Embedding', 'Positional Encoding', 'Self-Attention', 'Feed Forward', 'Normalization', 'Output'],
+    githubUrl: 'https://github.com/RajeshPhulwaria006/Transformer_Architecture_inNumpy'
+  },
+  {
+    id: 'gpt-tokenizer',
+    title: 'GPT-Style Tokenizer from Scratch',
+    tech: ['Python', 'BPE'],
+    points: [
+      'Implemented a byte-level BPE tokenizer with pair-frequency analysis, iterative merging, vocabulary construction, and encode/decode pipelines.',
+      'Trained on a diverse corpus and analyzed how merge count affects vocabulary size, tokenization granularity, and sequence length.',
+    ],
+    diagram: ['Text', 'UTF-8 Bytes', 'Pair Counting', 'Most Frequent Pair', 'Merge', 'Vocabulary', 'Token IDs'],
+    githubUrl: 'https://github.com/RajeshPhulwaria006/GPT-style_Tokenizer_scratch'
+  },
+  {
+    id: 'jarvis',
+    title: 'Jarvis — LLM Powered AI Assistant',
+    tech: ['Python', 'Gemini API'],
+    points: [
+      'Built an AI assistant supporting contextual conversations, speech recognition, browser automation, and real-time information retrieval.',
+      'Designed a modular architecture for integrating LLM capabilities and external tools.',
+    ],
+    diagram: ['User', 'Jarvis', 'LLM', 'Speech', 'Browser', 'Information Retrieval'],
+    githubUrl: 'https://github.com/RajeshPhulwaria006/Jarvis-Ai-chatbot'
+  },
+  {
+    id: 'foundational-ai-lab',
+    title: 'Foundational AI Lab',
+    tech: ['PyTorch', 'TensorFlow'],
+    points: [
+      'Developed an open-source repository exploring neural networks from mathematical foundations to practical implementations.',
+      'Implemented optimization techniques, CNNs, LSTMs, learning pipelines, visualization, and experimentation workflows.',
+    ],
+    diagram: ['Foundations', 'Optimization', 'CNNs', 'LSTMs', 'Experimentation', 'Visualization'],
+    githubUrl: 'https://github.com/RajeshPhulwaria006/AI-journey-foundation',
+    tag: 'Research Notebook / Laboratory',
   }
-
 ]
 
 export const publication = {
