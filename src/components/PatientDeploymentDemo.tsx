@@ -17,7 +17,7 @@ export default function PatientDeploymentDemo() {
                     </span>
 
                     <p className="font-mono text-[11px] uppercase tracking-wider text-signal">
-                        Live Deployment
+                        Live Deployment (currently stopped)
                     </p>
                 </div>
 
@@ -45,7 +45,7 @@ export default function PatientDeploymentDemo() {
                 <span className="h-2 w-2 rounded-full bg-ink-faint/40" />
 
                 <div className="ml-3 flex-1 rounded-md border border-line px-3 py-1.5 font-mono text-[10px] text-ink-faint truncate">
-                    16.178.42.216:8501 (currently stopped)
+                    16.178.42.216:8501 
                 </div>
             </div>
 
