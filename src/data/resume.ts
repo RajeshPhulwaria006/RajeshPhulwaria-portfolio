@@ -213,14 +213,45 @@ export const projects: Project[] = [
   }
 ]
 
-export const publication = {
-  title: 'A Comparative Analysis of Gradient Flow and Vanishing Gradient Effects in Deep Neural Networks',
-  venue: 'Zenodo · 2026',
-  description:
-    'Investigated gradient propagation across deep neural networks and analyzed activation functions affecting optimization stability and learning dynamics.',
-  doi: '10.5281/zenodo.19351203',
-  doiUrl: 'https://doi.org/10.5281/zenodo.19351203',
-}
+export const publication = [
+  {
+    title:
+      'Controlled Gradient-Flow Ablation',
+    venue: 'Zenodo · 2026',
+    description:
+      'An empirical investigation of controlled gradient-flow interventions in deep neural network training, examining their effects on gradient propagation and optimization behavior.',
+    doi: '10.5281/zenodo.24053276',
+    doiUrl: 'https://doi.org/10.5281/zenodo.24053276',
+    repoUrl:
+      'https://github.com/RajeshPhulwaria006/Controlled_Gradient-Flow_ablation',
+    GradientSteps: [
+      'Experimental Design',
+      'Model & Baseline Setup',
+      'Controlled Ablations',
+      'Gradient Measurement',
+      'Multi-Seed Evaluation',
+      'Statistical Analysis',
+      'Results & Visualization',
+    ]
+  },
+  {
+    title:
+      'A Comparative Analysis of Gradient Flow and Vanishing Gradient Effects in Deep Neural Networks',
+    venue: 'Zenodo · 2026',
+    description:
+      'Investigated gradient propagation across deep neural networks and analyzed activation functions affecting optimization stability and learning dynamics.',
+    doi: '10.5281/zenodo.19351203',
+    doiUrl: 'https://doi.org/10.5281/zenodo.19351203',
+    repoUrl: 'https://github.com/RajeshPhulwaria006/vanishing-gradient-study',
+    GradientSteps: [
+      'Forward Pass',
+      'Loss',
+      'Backpropagation',
+      'Gradient Flow',
+      'Parameter Updates',
+    ]
+  },
+]
 
 export const experience = [
   {
