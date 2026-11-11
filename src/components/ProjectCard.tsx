@@ -4,6 +4,7 @@ import type { Project } from '../data/resume'
 import PipelineDiagram from './PipelineDiagram'
 import BPEDemo from './BPEDemo'
 import PatientDeploymentDemo from './PatientDeploymentDemo'
+import TriageDemo from './TriageDemo'
 
 export default function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false)
@@ -89,6 +90,14 @@ export default function ProjectCard({ project }: { project: Project }) {
             Live Project Preview
           </p>
           <PatientDeploymentDemo />
+        </div>
+      )}
+      {expanded && project.id === 'triage' && (
+        <div className="border-t border-line p-7 sm:p-9">
+          <p className="font-mono text-[11px] text-ink-faint mb-4">
+            Live Project Preview
+          </p>
+          <TriageDemo />
         </div>
       )}
     </article>

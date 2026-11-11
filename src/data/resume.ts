@@ -94,6 +94,45 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'triage',
+    title: 'Triage — Intelligent Clinical Outpatient Prioritization',
+
+    tech: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'SQLite',
+      'better-sqlite3',
+      'Write-Ahead Logging (WAL)',
+      'Tailwind CSS 4',
+      'Docker',
+      'Node.js',
+    ],
+
+    points: [
+      'Built an explainable, rule-based clinical triage engine with acuity prioritization and safety escalation for vulnerable patients.',
+      'Developed a live outpatient dashboard featuring priority-based queues, bilingual symptom search, patient tracking, and nurse overrides.',
+      'Implemented SQLite persistence, crash-recovery journaling, and auditable clinical actions with mandatory justifications and CSV export.',
+    ],
+
+    diagram: [
+      'Patient Registration & Symptom Intake',
+      'Clinical Rule Evaluation',
+      'Priority Assignment & Safety Escalation',
+      'Acuity-Based Queue Management',
+      'Doctor Consultation & Status Updates',
+      'Audit Logging & Compliance Review',
+    ],
+
+    githubUrl:
+      'https://github.com/RajeshPhulwaria006/Triage',
+
+    note:
+      'Clinical decision-support prototype for outpatient workflow management. Intended to assist staff with prioritization and traceability, not replace qualified clinical judgment. Validate clinical rules and compliance claims with the relevant hospital and regulatory authorities before production use.',
+
+    tag: 'Healthcare · Clinical Decision Support · Full Stack',
+  },
+  {
     id: 'niyamit',
     title: 'Niyamit — Legal Metrology Compliance System',
     tech: [
